@@ -15,6 +15,69 @@
       "when": 1794491239627,
       "tag": "0002_projects_and_scenes",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1794494591375,
+      "tag": "0003_project_bible_characters_locations_scene_tags",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1794495374012,
+      "tag": "0004_project_status_archived_published",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1794495774585,
+      "tag": "0005_stage3_story_script_document_and_scene_script_heading",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1794496208547,
+      "tag": "0006_stage4_canvas_nodes_media_chat",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "6",
+      "when": 1794496927833,
+      "tag": "0007_stage5_editor_timeline_texts_audio_and_cut_flag",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "6",
+      "when": 1794497721523,
+      "tag": "0008_stage6_stage_setups_and_items",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "6",
+      "when": 1794498152276,
+      "tag": "0009_stage7_styles_library",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "6",
+      "when": 1794498726157,
+      "tag": "0010_stage8_gallery_likes_supports_festival_featured",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "6",
+      "when": 1794501071744,
+      "tag": "0011_stage9_account_credits_plans_models",
+      "breakpoints": true
     }
   ]
 }

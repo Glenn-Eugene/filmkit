@@ -66,6 +66,73 @@
   .kb-a, .kb-b { animation: scene-fade 0.3s ease-out; }
 }
 
+/* Editor cut player (Stage 5): transitions, text motions, effect overlays. */
+@keyframes cut-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes cut-fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+@keyframes cut-wipe-in {
+  from { clip-path: inset(0 0 0 100%); }
+  to { clip-path: inset(0 0 0 0); }
+}
+@keyframes txt-rise {
+  from { opacity: 0; transform: translateY(26px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes txt-slam {
+  0% { opacity: 0; transform: scale(2.4); }
+  60% { opacity: 1; transform: scale(0.94); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes txt-roll {
+  from { transform: translateY(110%); }
+  to { transform: translateY(-110%); }
+}
+@keyframes grain-shift {
+  0% { background-position: 0 0; }
+  25% { background-position: -38px 22px; }
+  50% { background-position: 24px -30px; }
+  75% { background-position: -14px -18px; }
+  100% { background-position: 0 0; }
+}
+@keyframes vhs-track {
+  from { top: -12%; }
+  to { top: 112%; }
+}
+.cut-in-dissolve { animation: cut-fade-in 0.7s ease-out both; }
+.cut-prev-fade { animation: cut-fade-out 0.7s ease-out both; }
+.cut-in-wipe { animation: cut-wipe-in 0.7s ease-in-out both; }
+.txt-rise { animation: txt-rise 0.6s ease-out both; }
+.txt-slam { animation: txt-slam 0.38s ease-out both; }
+.txt-roll {
+  animation-name: txt-roll;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+.grain-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+  animation: grain-shift 0.45s steps(3) infinite;
+}
+.vhs-lines {
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.16) 0 1px,
+    transparent 1px 3px
+  );
+}
+.vhs-bar { animation: vhs-track 3.2s linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .grain-overlay, .vhs-bar { animation: none; }
+  .txt-rise, .txt-slam, .cut-in-dissolve, .cut-in-wipe, .cut-prev-fade {
+    animation-duration: 0.01s;
+  }
+}
+
 /* Slow pulse for "generating" frames. */
 @keyframes frame-pulse {
   0%, 100% { opacity: 0.55; }
