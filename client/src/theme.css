@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&display=swap');
+@import "tailwindcss";
+@import "tailwindcss-safe-area";
+
+@theme {
+  --text-xs: 12px;
+  --text-xs--line-height: 16px;
+  --text-sm: 14px;
+  --text-sm--line-height: 20px;
+  --text-base: 16px;
+  --text-base--line-height: 24px;
+  --text-lg: 18px;
+  --text-lg--line-height: 28px;
+  --text-xl: 20px;
+  --text-xl--line-height: 28px;
+  --text-2xl: 24px;
+  --text-2xl--line-height: 32px;
+  --text-3xl: 30px;
+  --text-3xl--line-height: 36px;
+  --text-4xl: 36px;
+  --text-4xl--line-height: 40px;
+  --text-5xl: 48px;
+  --text-5xl--line-height: 52px;
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+
+:root {
+  color-scheme: light;
+  --bg: #f6f3ec;
+  --surface: #fffdf8;
+  --text: #17171c;
+  --dim: #7a7264;
+  --border: #e3ddd0;
+  --accent: #b97f1e;
+  --ink: #0c0c10;
+  --ink-dim: #a49e90;
+  --radius: 14px;
+  --space-surface: var(--surface);
+  --space-surface-alt: var(--surface);
+  --space-muted: var(--dim);
+  --space-border: var(--border);
+  --space-accent: var(--accent);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Cinematic pan/zoom for the film player (Ken Burns). */
+@keyframes kenburns-a {
+  from { transform: scale(1.02) translate(0, 0); }
+  to { transform: scale(1.16) translate(-1.6%, 1.2%); }
+}
+@keyframes kenburns-b {
+  from { transform: scale(1.16) translate(1.4%, -1%); }
+  to { transform: scale(1.03) translate(0, 0); }
+}
+@keyframes scene-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.kb-a { animation: kenburns-a 7s ease-out forwards, scene-fade 0.7s ease-out; }
+.kb-b { animation: kenburns-b 7s ease-out forwards, scene-fade 0.7s ease-out; }
+
+@media (prefers-reduced-motion: reduce) {
+  .kb-a, .kb-b { animation: scene-fade 0.3s ease-out; }
+}
+
+/* Slow pulse for "generating" frames. */
+@keyframes frame-pulse {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+.frame-pulse { animation: frame-pulse 1.6s ease-in-out infinite; }
+
+/* Phone tap targets: at least 32px tall. */
+@layer base {
+  button, [role="button"], select, summary, input:not([type="checkbox"], [type="radio"]) {
+    min-height: 2rem;
+  }
+}

@@ -1,0 +1,15 @@
+node_modules/
+dist/
+dist-cvm/
+.space-build/
+.space-build-cvm/
+.harness/
+.bun-cache/
+app.db
+app.db-shm
+app.db-wal
+blobs/
+audits/
+*.tsbuildinfo
+client/src/assets/hero.jpg
+icon.webp
