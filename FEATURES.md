@@ -368,14 +368,33 @@ Status key: ✅ in FilmKit now · 🔨 building · ⬜ planned stage
 - Credit costs are per generation and vary with resolution/references —
   shown on the Run button. Examples seen: GPT Image 2.5 at 1K = 5 credits
   (range 2–110); image-to-video from 20 credits (Auto range 20–240);
-  cheapest video Pruna Draft 3–40. ⬜ (FilmKit: single built-in generator
-  today; catalog + real models come with the aggregator stage)
+  cheapest video Pruna Draft 3–40. ✅ **(built Stage 9, 2026-11-12 — the
+  full catalog lives in FilmKit with costs/ranges, fulfillment class, and
+  locks, and pickers on scene generation, canvas image nodes, and
+  Frame to Clip show name + cost + lock before running. Fulfillment is
+  honest: only "FilmKit Standard" (the built-in image engine) and Flick's
+  6 budget video models (as motion clips) run built-in; every other model
+  is aggregator-locked until a fal.ai/Replicate key is saved in
+  Integrations. Attempts with an invalid key fail with a clear error and
+  an automatic refund — verified. Real aggregator fulfillment is the one
+  piece that still needs Glenn's real key.)**
 
 ## 11. Credits and plans
 
 - Balance in the top bar on every page; "+ 200 CREDITS" top-up button.
   Top-ups on paid plans: $1.50 per 100 credits. Plan credits do **not** roll
-  over; failed generations refund credits. ⬜
+  over; failed generations refund credits. ✅ **(built Stage 9, 2026-11-12
+  — FilmKit runs this exact system at Flick's prices, Glenn's decision:
+  Free 100 / Casual $4/500 / Standard $16/2,500 / Pro $45/8,000 / Studio
+  $100/24,000 credits, top-ups $1.50/100 shown but purchase-disabled,
+  Monday +100 on Free expiring in 7 days, monthly cycle grants with
+  expiry of leftovers, a full ledger (grant/spend/refund/expiry), costs
+  charged per generation at the selected model, and a clear
+  insufficient-credits stop. Payments are NOT connected: every price
+  surface says so, plan switching is live only to exercise the tiers, and
+  no card is ever charged. Plan gates are live too: full video catalog +
+  no-watermark at Standard+, "Made with FilmKit" watermark on Free/Casual
+  playback, budget-6 video on Free/Casual.)**
 - Free plan extras: 100 free credits every Monday (unused expire each week);
   join Discord = +200 credits; invite a friend who subscribes to Standard+
   = 2,000 credits. ⬜
@@ -479,6 +498,15 @@ Status key: ✅ in FilmKit now · 🔨 building · ⬜ planned stage
 
 ## 14. Account center
 
+✅ **(built Stage 9, 2026-11-12 — FilmKit's Account Center has Account,
+Usage with the full credit ledger, Billing and plans with the compare
+table and the payments-not-connected note, Preferences — workflow rules
+feed the canvas chat — Notifications toggles, Team (owner + plan-based
+member note; invites honestly wait for full accounts), Integrations
+(aggregator key, write-only), and Help. Sign-in is honestly labeled a
+workspace account; full multi-user sign-ups and connected apps/MCP are
+launch steps beyond this build.)** The Flick reference inventory:
+
 - **Account:** profile photo, name, bio; sign-in email shown as "managed by
   Google sign-in"; **Connected apps — Connect to Claude, Connect to
   ChatGPT, Connect to Cursor, other AI apps via a copied MCP connector
@@ -571,4 +599,12 @@ Status key: ✅ in FilmKit now · 🔨 building · ⬜ planned stage
    copying structure without stills, and the in-app Festival shelf with
    persisted submissions; unpublishing removes a film everywhere)
 9. Accounts + credits + plans (aggregator models, catalog, credit ledger,
-   plan gates, top-ups), account center, teams, notifications
+   plan gates, top-ups), account center, teams, notifications — ✅ done
+   (2026-11-12; see §§10, 11, 14 — live credit ledger at Flick's exact
+   prices with Monday grants, cycle expiry and auto-refunds; the 71-entry
+   model catalog with built-in vs aggregator-locked fulfillment and
+   cost-on-the-button pickers; Flick's plan gates incl. the Free/Casual
+   watermark; the full Account Center with Integrations waiting on
+   Glenn's aggregator key; honestly-locked Voice/Music/Emotion canvas
+   nodes complete the §7 menu. Payments not connected — stated in-app.
+   ALL 9 STAGES COMPLETE.)
